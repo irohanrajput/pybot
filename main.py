@@ -4,6 +4,9 @@ import json
 
 with open('/path/to/apikey.json') as f:
     api_key = json.load(f)['api_key']
+#create a file called 'apikey.json' in your root direvtory and add your api key in it
+#Sample: {"key": "YOUR_API_KEY_HERE"}
+#sayonarraaaa
 
 openai.api_key = api_key
 

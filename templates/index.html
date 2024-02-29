@@ -3,6 +3,60 @@
 <head>
     <title>Pybot</title>
 </head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+    }
+    
+    h1 {
+        color: #333;
+        text-align: center;
+    }
+    
+    form {
+        text-align: center;
+    }
+    
+    input[type="text"] {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-right: 5px;
+    }
+    
+    button {
+        padding: 8px 15px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #45a049;
+    }
+    
+    p {
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    /* Adjustments for responsiveness */
+    @media screen and (max-width: 600px) {
+        input[type="text"] {
+            width: 70%;
+        }
+        
+        button {
+            width: 25%;
+        }
+    }
+    
+</style>
 <body>
     <h1>Need some help kid ?? well here I am, your personal AI chatbot Mikasaaa</h1>
     <form method="POST" action="/get_response">

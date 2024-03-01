@@ -1,32 +1,34 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Pybot</title>
 </head>
 <style>
     body {
         font-family: Arial, sans-serif;
-        background-color: #f0f0f0;
-        margin: 0;
-        padding: 0;
+        background-color: #000000;
+        margin: auto;
+        margin: 2%;
     }
-    
+
     h1 {
-        color: #333;
-        text-align: center;
+        color: #ffffff;
+        text-align: left;
     }
-    
+
     form {
-        text-align: center;
+        text-align: left;
     }
-    
+
     input[type="text"] {
-        padding: 8px;
-        border: 1px solid #ccc;
+        padding: 26px;
+        border: 1px solid #ffffff;
         border-radius: 5px;
         margin-right: 5px;
+        width: 95%;
     }
-    
+
     button {
         padding: 8px 15px;
         background-color: #4CAF50;
@@ -35,36 +37,75 @@
         border-radius: 5px;
         cursor: pointer;
     }
-    
+
     button:hover {
         background-color: #45a049;
     }
-    
+
     p {
-        text-align: center;
+        text-align: left;
         margin-top: 20px;
     }
-    
+
     /* Adjustments for responsiveness */
     @media screen and (max-width: 600px) {
         input[type="text"] {
             width: 70%;
         }
-        
+
         button {
             width: 25%;
         }
     }
-    
+
+    .textbox-class {
+        text-align: bottom;
+        margin-top: 20px;
+        position: sticky;
+        bottom: 24px;
+
+    }
+
+    .chat_history-class {
+        margin-top: 20px;
+        background-color: #aeacac;
+        margin: 5px;
+        padding-inline: 2%;
+        padding-block: 2px;
+        border-radius: 5%;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    #button{
+        padding: 8px 15px;
+       margin-left: -58px;
+    }
+    .heading-class{
+        text-align: center;
+        border-bottom: #752424 2px solid;
+        padding-bottom: 5px;
+    }
+
 </style>
+
 <body>
+    <h1 class="heading-class">PyBot</h1>    
     <h1>Need some help kid ?? well here I am, your personal AI chatbot Mikasaaa</h1>
-    <form method="POST" action="/get_response">
-        <input type="text" name="user_input" >
-        <button type="submit">>></button>
-    </form>
+    
+    <div class="textbox-class">
+        <form method="POST" action="/get_response">
+            <input type="text" name="user_input" placeholder="Message Mikasaa">
+            <button id="button" type="submit">>></button>
+        </form>
+    </div>
+
     <br>
-    <p>Me: {{ user_prompt  }}</p>
-    <p>Mikasa: {{ response_text }}</p>
+
+    {% for instance in chat_history %}
+    <div class="chat_history-class">
+        <p><strong>Me:</strong> {{ instance.user_text }}</p>
+        <p><strong>Mikasaaa:</strong> {{ instance.response_text }}</p>
+    </div>
+    {% endfor %}
 </body>
+
 </html>

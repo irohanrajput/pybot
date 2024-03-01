@@ -1,6 +1,6 @@
 # GPT-3.5 Chat Assistant with Flask
 
-This is a simple Flask web application that utilizes OpenAI's GPT-3 model to create a chat assistant. Users can interact with the chat assistant by entering text prompts, and the assistant will respond based on the input.
+This is a simple Flask web application that utilizes OpenAI's GPT-3.5 model to create a chat assistant. Users can interact with the chat assistant by entering text prompts, and the assistant will respond based on the input.
 
 ## Getting Started
 
